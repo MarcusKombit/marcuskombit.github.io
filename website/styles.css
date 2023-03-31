@@ -10,6 +10,7 @@ body {
   font-family: 'Inter', sans-serif;
   background-image: url("../images/background.jpg");
   background-size: cover; 
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 .container {
@@ -23,7 +24,7 @@ body {
 
 /* slot machine styles */
 .machine {
-  width: 1500px; /*900px*/
+  width: 1300px; /*900px*/
   max-width: 100%;
   height: 300px;
   background-color: #000000;
@@ -60,7 +61,7 @@ body {
 
 .play-btn {
   align-items: center;
-  background-color: #fee6e3;
+  background-color: #ffffff;
   border: 2px solid #111;
   border-radius: 50px;
   box-sizing: border-box;
@@ -103,7 +104,7 @@ body {
 }
 
 .play-btn:active {
-  background-color: #ffdeda;
+  background-color: #ffffff;
   outline: 0;
 }
 
@@ -135,7 +136,7 @@ body {
 }
 
 .copyright a:hover {
-  background-color: #ffdeda;
+  background-color: #ffffff;
   text-decoration: none;
 }
 
