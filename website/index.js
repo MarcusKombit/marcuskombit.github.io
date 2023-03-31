@@ -1,6 +1,6 @@
 'use strict';
 
-let values = ['😀', '😁', '😂', '🤣', '😄', '😅', '😆', '😉', '😋', '😍'];
+let values = ['HEJ', '😁', '😂', '🤣', '😄', '😅', '😆', '😉', '😋', '😍'];
 
 // selecting all elements
 let valueOne = document.getElementById('value-one');
