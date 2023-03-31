@@ -13,9 +13,12 @@ body {
 }
 
 .image-class {
-  position: absolute;
-  bottom: 0;
-  right: 0;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
 }
 
 .overlay {
