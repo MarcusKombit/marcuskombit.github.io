@@ -34,11 +34,10 @@ body {
 
 /* slot machine styles */
 .machine {
-  opacity: 0.5;
   width: 1300px; /*900px*/
   max-width: 100%;
   height: 300px;
-  background-color: #000000;
+  background-color: rgba(0, 0, 0, 0.5);
   /*border: dashed #000000 3px;*/
   border-radius: 30px;
 
