@@ -73,9 +73,9 @@ function spinValues() {
     slotThree = valueThree.innerHTML;
 
     if (slotOne == slotTwo && slotTwo == slotThree) {
-      result.innerHTML = 'Victory 🏆';
+      result.innerHTML = 'Du vandt! 🏆';
     } else {
-      result.innerHTML = 'Try again!';
+      result.innerHTML = 'Prøv igen!';
     }
   }
 }
