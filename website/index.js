@@ -5,7 +5,7 @@
 // let values = ['😀', '😁', '😂', '🤣', '😄', '😅', '😆', '😉', '😋', '😍'];
 
 
-let values = ['Skole \n hej', 'Borger\nhej', 'Dagtilbud', 'DFDG', 'DREAM', 'FSIII', 'KY', 'Nøgletal', 'Aula', 'Ældre'];
+let values = ['Skole \n hej', 'Borger fgfjkisjkskeiisjekkfoeslide', 'Dagtilbud               hej', 'DFDG', 'DREAM', 'FSIII', 'KY', 'Nøgletal', 'Aula', 'Ældre'];
 
 
 // selecting all elements
