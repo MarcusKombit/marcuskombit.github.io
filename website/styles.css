@@ -86,8 +86,9 @@ body {
 }
 
 .smaller {
-  font-size: 70%;
+  font-size: 50%;
   font-weight: bold;
+  text-align: center;
 }
 
 
