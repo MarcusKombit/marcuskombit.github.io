@@ -1,89 +1,71 @@
-'use strict';
+const symbols = [
+    { group: "fruits", symbols: ["🍎", "🍌", "🍇", "🍊", "🍉"] },
+    { group: "animals", symbols: ["🐶", "🐱", "🐻", "🦁", "🐯"] },
+    { group: "emoticons", symbols: ["😀", "😍", "😂", "😎", "🤔"] },
+  ];
+  
+  const slot1 = document.getElementById("slot1");
+  const slot2 = document.getElementById("slot2");
+  const slot3 = document.getElementById("slot3");
+  const spinButton = document.getElementById("spinButton");
+  
+  let spinning = false;
+  
+  function spin() {
+    if (spinning) return;
+  
+    spinning = true;
+  
+    const spins = [spinSlot(slot1), spinSlot(slot2), spinSlot(slot3)];
+  
+    Promise.all(spins)
+      .then((results) => {
+        const symbolsByGroup = symbols.reduce((acc, cur) => {
+          acc[cur.group] = cur.symbols;
+          return acc;
+        }, {});
+  
+        const symbolGroups = results.map((symbol) => {
+          for (const group in symbolsByGroup) {
+            if (symbolsByGroup[group].includes(symbol)) {
+              return group;
+            }
+          }
+        });
+  
+        const symbolElements = [slot1.querySelector(".symbols"), slot2.querySelector(".symbols"), slot3.querySelector(".symbols")];
+  
+        symbolElements.forEach((symbolElement, index) => {
+          symbolElement.innerHTML = `${results[index]}<br>${symbolGroups[index]}`;
+        });
+        
+      if (symbolGroups[0] === symbolGroups[1] && symbolGroups[1] === symbolGroups[2]) {
+        alert("You won!");
+      } else {
+        alert("You lost!");
+      }
 
-let values = ['Skole', 'Borger', 'Dagtilbud', 'DFDG', 'DREAM', 'FSIII', 'KY', 'Nøgletal', 'Aula', 'Ældre'];
-
-// let values = ['😀', '😁', '😂', '🤣', '😄', '😅', '😆', '😉', '😋', '😍'];
-
-// selecting all elements
-let valueOne = document.getElementById('value-one');
-let valueTwo = document.getElementById('value-two');
-let valueThree = document.getElementById('value-three');
-let result = document.getElementById('result');
-const playBtn = document.getElementById('play-btn');
-
-// Generate a click event and assign the 'spinValues' function
-playBtn.addEventListener('click', spinValues);
-
-function spinValues() {
-  // Deactivate the play button so as not to allow the user to click several times.
-  playBtn.disabled = true;
-
-  /*
-   * Generate the number of random attempts by calling 'randomAttempts' function
-   * Later we'll use this value to compare with 'initValue' to stop 'setInterval' method
-   */
-  const attempts = randomAttempts(3, values.length);
-
-  // initial values to compare with attempts to stop 'setInterval' method
-  let initValue_one = 0,
-    initValue_two = 0,
-    initValue_three = 0;
-
-  /*
-   * slotOne, slotTwo, slotThree
-   * For each slot, using 'setInterval' method
-   * Generate random emojis until the number of attempts is reached
-   * When the last slot has loaded, the victory function is called up
-   */
-  let slotOne = setInterval(() => {
-    valueOne.innerHTML = values[randomNumber(values.length)];
-    initValue_one++;
-
-    if (initValue_one == attempts) {
-      clearInterval(slotOne);
-      return null;
-    }
-  }, 100);
-
-  let slotTwo = setInterval(() => {
-    valueTwo.innerHTML = values[randomNumber(values.length)];
-    initValue_two++;
-
-    if (initValue_two == attempts) {
-      clearInterval(slotTwo);
-      return null;
-    }
-  }, 100);
-
-  let slotThree = setInterval(() => {
-    valueThree.innerHTML = values[randomNumber(values.length)];
-    initValue_three++;
-
-    if (initValue_three == attempts) {
-      clearInterval(slotThree);
-      victory();
-      playBtn.disabled = false;
-      return null;
-    }
-  }, 100);
-
-  function victory() {
-    slotOne = valueOne.innerHTML;
-    slotTwo = valueTwo.innerHTML;
-    slotThree = valueThree.innerHTML;
-
-    if (slotOne == slotTwo && slotTwo == slotThree) {
-      result.innerHTML = 'Du vandt! 🏆';
-    } else {
-      result.innerHTML = 'Prøv igen!';
-    }
-  }
+      spinning = false;
+    })
+    .catch(console.error);
 }
 
-function randomNumber(length) {
-  return Math.floor(Math.random() * length);
+function spinSlot(slot) {
+  const symbolsCount = symbols.length;
+  const duration = Math.floor(Math.random() * 2000) + 1000;
+
+  return new Promise((resolve, reject) => {
+    let counter = 0;
+    const interval = setInterval(() => {
+      const symbol = symbols[Math.floor(Math.random() * symbolsCount)].symbols[Math.floor(Math.random() * symbolsCount)];
+      slot.querySelector(".symbols").textContent = symbol;
+
+      if (++counter === 10) {
+        clearInterval(interval);
+        resolve(symbol);
+      }
+    }, duration / 10);
+  });
 }
 
-function randomAttempts(min, max) {
-  return Math.floor(Math.random() * max + min);
-}
+spinButton.addEventListener("click", spin);
