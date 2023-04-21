@@ -5,7 +5,9 @@
 // let values = ['😀', '😁', '😂', '🤣', '😄', '😅', '😆', '😉', '😋', '😍'];
 
 
-let values = ['Skole \n hej', 'Borger fgfjkisjkskeiisjekkfoeslide', 'Dagtilbud               hej', 'DFDG', 'DREAM', 'FSIII', 'KY', 'Nøgletal', 'Aula', 'Ældre'];
+let values = ['Skole hej', 'Borger med', 'Dagtilbud dig'];
+let slotElement = document.querySelector('.slot');
+slotElement.innerHTML = values.map(val => val.split(' ').join('<br>')).join('<br><br>');
 
 
 // selecting all elements
