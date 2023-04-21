@@ -40,7 +40,8 @@ function spinValues() {
    * When the last slot has loaded, the victory function is called up
    */
   let slotOne = setInterval(() => {
-    valueOne.innerHTML = values[randomNumber(values.length)];
+    let words = values[randomNumber(values.length)].split('\n');
+    valueOne.innerHTML = words[0] + '<br>' + '<span class="smaller">' + words[1] + '</span>';
     initValue_one++;
 
     if (initValue_one == attempts) {
@@ -50,7 +51,8 @@ function spinValues() {
   }, 100);
 
   let slotTwo = setInterval(() => {
-    valueTwo.innerHTML = values[randomNumber(values.length)];
+    let words = values[randomNumber(values.length)].split('\n');
+    valueTwo.innerHTML = words[0] + '<br>' + '<span class="smaller">' + words[1] + '</span>';
     initValue_two++;
 
     if (initValue_two == attempts) {
@@ -60,7 +62,8 @@ function spinValues() {
   }, 100);
 
   let slotThree = setInterval(() => {
-    valueThree.innerHTML = values[randomNumber(values.length)];
+    let words = values[randomNumber(values.length)].split('\n');
+    valueThree.innerHTML = words[0] + '<br>' + '<span class="smaller">' + words[1] + '</span>';
     initValue_three++;
 
     if (initValue_three == attempts) {

@@ -85,6 +85,12 @@ body {
   white-space: pre-line; /* preserve line breaks */
 }
 
+.smaller {
+  font-size: 70%;
+  font-weight: bold;
+}
+
+
 /* controls styles */
 .control {
   display: flex;
