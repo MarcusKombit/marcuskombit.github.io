@@ -89,8 +89,10 @@ body {
   font-size: 50%;
   font-weight: bold;
   text-align: center;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  color: red;
+  color: rgb(30, 232, 100);
 }
 
 
