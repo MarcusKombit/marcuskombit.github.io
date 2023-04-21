@@ -19,11 +19,15 @@
   }
   
   .symbols {
-    font-size: 100px;
+    font-size: 50px;
     font-weight: bold;
   }
   
   #spinButton {
     display: block;
     margin: 50px auto;
+  }
+
+  .symbol-group {
+    font-size: 12px;
   }

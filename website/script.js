@@ -12,43 +12,73 @@ const symbols = [
   let spinning = false;
   
   function spin() {
-    if (spinning) return;
+    // Disable the spin button while the slots are spinning
+    spinButton.disabled = true;
   
-    spinning = true;
+    // Generate random symbols for each slot
+    var symbols1 = generateRandomSymbols();
+    var symbols2 = generateRandomSymbols();
+    var symbols3 = generateRandomSymbols();
   
-    const spins = [spinSlot(slot1), spinSlot(slot2), spinSlot(slot3)];
+    // Set the symbols for each slot
+    setSymbols(slot1, symbols1);
+    setSymbols(slot2, symbols2);
+    setSymbols(slot3, symbols3);
   
-    Promise.all(spins)
-      .then((results) => {
-        const symbolsByGroup = symbols.reduce((acc, cur) => {
-          acc[cur.group] = cur.symbols;
-          return acc;
-        }, {});
+    // Animate the symbols
+    animateSymbols(slot1, symbols1);
+    animateSymbols(slot2, symbols2);
+    animateSymbols(slot3, symbols3, function() {
+      // Re-enable the spin button when the slots stop spinning
+      spinButton.disabled = false;
   
-        const symbolGroups = results.map((symbol) => {
-          for (const group in symbolsByGroup) {
-            if (symbolsByGroup[group].includes(symbol)) {
-              return group;
-            }
-          }
-        });
-  
-        const symbolElements = [slot1.querySelector(".symbols"), slot2.querySelector(".symbols"), slot3.querySelector(".symbols")];
-  
-        symbolElements.forEach((symbolElement, index) => {
-          symbolElement.innerHTML = `${results[index]}<br>${symbolGroups[index]}`;
-        });
-        
-      if (symbolGroups[0] === symbolGroups[1] && symbolGroups[1] === symbolGroups[2]) {
-        alert("You won!");
-      } else {
-        alert("You lost!");
+      // Check for a win
+      if (checkForWin(symbols1, symbols2, symbols3)) {
+        alert("Congratulations, you won!");
       }
-
-      spinning = false;
-    })
-    .catch(console.error);
-}
+    });
+  }
+  
+  function animateSymbols(slot, symbols, callback) {
+    // Set the animation duration based on the number of symbols
+    var duration = 1000 + (symbols.length - 1) * 500;
+  
+    // Randomly select a group name
+    var groupName = groups[Math.floor(Math.random() * groups.length)];
+  
+    // Animate each symbol
+    for (var i = 0; i < symbols.length; i++) {
+      // Create a new symbol element
+      var symbol = document.createElement("div");
+  
+      // Add the symbol image
+      symbol.style.backgroundImage = "url('" + symbols[i].url + "')";
+  
+      // Add the symbol group name as a child element
+      var group = document.createElement("div");
+      group.classList.add("symbol-group");
+      group.textContent = groupName;
+      symbol.appendChild(group);
+  
+      // Set the initial position of the symbol
+      symbol.style.top = i * SYMBOL_HEIGHT + "px";
+  
+      // Add the symbol to the slot element
+      slot.querySelector(".symbols").appendChild(symbol);
+  
+      // Animate the symbol to the final position
+      symbol.animate([
+        { transform: "translateY(-" + SYMBOL_HEIGHT * i + "px)" },
+        { transform: "translateY(-" + SYMBOL_HEIGHT * i + "px)" }
+      ], {
+        duration: duration,
+        easing: "cubic-bezier(0.5, 0, 0.5, 1)"
+      });
+    }
+  
+    // Call the callback function after the animation is complete
+    setTimeout(callback, duration);
+  }
 
 function spinSlot(slot) {
   const symbolsCount = symbols.length;
