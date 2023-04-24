@@ -196,8 +196,8 @@ body {
 
 #result {
   position: fixed;
-  bottom: 0;
-  left: 0;
+  bottom: 40px;
+  left: 40px;
   width: 100%;
   font-size: 40px;
   font-weight: 700;
