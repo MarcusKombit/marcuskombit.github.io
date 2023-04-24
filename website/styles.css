@@ -59,7 +59,7 @@ body {
   padding: 30px;
   align-items: center;
   justify-content: center;
-  margin-left: 50px;
+  margin-left: 100px;
 }
 
 /*
@@ -79,7 +79,7 @@ body {
 .slot {
   width: 100%;
   height: 100%;
-  background-color: #ffffff;
+  background-color: rgb(240, 230, 200);
   font-size: 300%;
   font-weight: bold;
   border-radius: 30px;
@@ -150,7 +150,7 @@ body {
 }
 
 
-
+/*
 .play-btn:after {
   background-color: #111;
   border-radius: 50px;
@@ -178,6 +178,7 @@ body {
 .play-btn:hover {
   outline: 0;
 }
+*/
 
 /* Result text styles */
 #result {
