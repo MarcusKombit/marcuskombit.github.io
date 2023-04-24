@@ -185,29 +185,12 @@ body {
 #result {
   font-size: 40px;
   font-weight: 700;
-  margin-bottom: 60px;
+  margin-bottom: 600px;
   text-align: center;
+  color: rgb(232, 253, 0);
 }
 
-/* Copyright */
-.copyright {
-  font-family: 'Inter', sans-serif;
-  font-size: 15px;
-  width: 100%;
-  text-align: center;
-  position: relative;
-  height: 5vh;
-  color: #111;
-}
 
-.copyright a {
-  color: #111;
-}
-
-.copyright a:hover {
-  background-color: #ffffff;
-  text-decoration: none;
-}
 
 /* Media query for Tablet */
 @media (max-width: 1024px) {

@@ -82,7 +82,7 @@ function spinValues() {
     if (slotOne == slotTwo && slotTwo == slotThree) {
       result.innerHTML = 'Du vandt! 🏆';
     } else {
-      //result.innerHTML = 'Prøv igen!';
+      result.innerHTML = 'Prøv igen!';
     }
   }
 }
