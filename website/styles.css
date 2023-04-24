@@ -182,13 +182,6 @@ body {
 }
 */
 
-/* controls styles */
-.winner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 60px;
-}
 
 /* Result text styles */
 #result {
