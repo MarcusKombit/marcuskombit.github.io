@@ -58,7 +58,8 @@ body {
   gap: 30px;
   padding: 30px;
   align-items: center;
-  justify-content: center;     
+  justify-content: center;
+  margin-left: 50px;
 }
 
 /*
@@ -107,6 +108,7 @@ body {
   margin-top: 60px;
 }
 
+/*
 .play-btn {
   align-items: center;
   background-color: #ffffff;
@@ -131,6 +133,23 @@ body {
   -webkit-user-select: none;
   touch-action: manipulation;
 }
+*/
+
+.play-btn {
+  background-color: #ff0000; /* change to red background color */
+  border: none; /* remove border */
+  border-radius: 50%; /* make border radius 50% to make it a circle */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* add box-shadow for depth */
+  color: #ffffff; /* change text color to white */
+  font-size: 24px; /* increase font size */
+  height: 80px; /* increase height */
+  width: 80px; /* increase width */
+  position: fixed; /* set position to fixed for positioning */
+  top: 20px; /* move it to the top */
+  right: 20px; /* move it to the right */
+}
+
+
 
 .play-btn:after {
   background-color: #111;
