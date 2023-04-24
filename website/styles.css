@@ -143,10 +143,10 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* add box-shadow for depth */
   color: #ffffff; /* change text color to white */
   font-size: 24px; /* increase font size */
-  height: 250px; /* increase height */
-  width: 250px; /* increase width */
+  height: 270px; /* increase height */
+  width: 270px; /* increase width */
   position: fixed; /* set position to fixed for positioning */
-  top: 30px; /* move it to the top */
+  top: 20px; /* move it to the top */
   right: 1px; /* move it to the right */
 }
 
@@ -185,7 +185,7 @@ body {
 #result {
   font-size: 40px;
   font-weight: 700;
-  margin-bottom: 600px;
+  margin-bottom: 60px;
   text-align: center;
   color: rgb(232, 253, 0);
 }
