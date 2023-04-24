@@ -42,7 +42,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: 20px;
-  margin-left: 700px;
+  margin-right: 700px;
 }
 
 /* slot machine styles */
@@ -142,11 +142,11 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* add box-shadow for depth */
   color: #ffffff; /* change text color to white */
   font-size: 24px; /* increase font size */
-  height: 500px; /* increase height */
-  width: 500px; /* increase width */
+  height: 150px; /* increase height */
+  width: 150px; /* increase width */
   position: fixed; /* set position to fixed for positioning */
-  top: 120px; /* move it to the top */
-  right: 120px; /* move it to the right */
+  top: 50px; /* move it to the top */
+  right: 50px; /* move it to the right */
 }
 
 
