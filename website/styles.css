@@ -136,17 +136,17 @@ body {
 */
 
 .play-btn {
-  background-color: #ff0000; /* change to red background color */
+  background-color: #e24646; /* change to red background color */
   border: none; /* remove border */
   border-radius: 50%; /* make border radius 50% to make it a circle */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* add box-shadow for depth */
   color: #ffffff; /* change text color to white */
   font-size: 24px; /* increase font size */
-  height: 80px; /* increase height */
-  width: 80px; /* increase width */
+  height: 500px; /* increase height */
+  width: 500px; /* increase width */
   position: fixed; /* set position to fixed for positioning */
-  top: 20px; /* move it to the top */
-  right: 20px; /* move it to the right */
+  top: 120px; /* move it to the top */
+  right: 120px; /* move it to the right */
 }
 
 
