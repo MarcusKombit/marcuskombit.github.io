@@ -42,7 +42,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: 20px;
-  margin-right: 300px;
+  margin-right: 295px;
   margin-top: 50px;
 }
 
@@ -183,7 +183,7 @@ body {
 */
 
 
-/* Result text styles */
+/* Result text styles 
 #result {
   font-size: 40px;
   font-weight: 700;
@@ -191,6 +191,18 @@ body {
   text-align: center;
   color: rgb(232, 253, 0);
 }
+*/
 
+#result {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  color: rgb(232, 253, 0);
+  margin: 0;
+}
 
 
