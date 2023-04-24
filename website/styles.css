@@ -48,7 +48,7 @@ body {
 
 /* slot machine styles */
 .machine {
-  width: 1280px; /*900px*/
+  width: 1290px; /*900px*/
   max-width: 100%;
   height: 670px;
   background-color: rgba(0, 0, 0, 0);
@@ -57,7 +57,7 @@ body {
 
   display: flex;
   flex-direction: row;
-  gap: 15px;
+  gap: 5px;
   padding: 30px;
   align-items: center;
   justify-content: center;
@@ -144,8 +144,8 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* add box-shadow for depth */
   color: #ffffff; /* change text color to white */
   font-size: 24px; /* increase font size */
-  height: 260px; /* increase height */
-  width: 260px; /* increase width */
+  height: 250px; /* increase height */
+  width: 250px; /* increase width */
   position: fixed; /* set position to fixed for positioning */
   top: 20px; /* move it to the top */
   right: 1px; /* move it to the right */
@@ -182,6 +182,14 @@ body {
 }
 */
 
+/* controls styles */
+.winner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
 /* Result text styles */
 #result {
   font-size: 40px;
@@ -193,48 +201,3 @@ body {
 
 
 
-/* Media query for Tablet */
-@media (max-width: 1024px) {
-  .machine {
-    width: 700px;
-  }
-
-  .slot {
-    font-size: 500%;
-  }
-}
-
-/* Media query for Mobile */
-@media (max-width: 560px) {
-  .container {
-    height: 850px;
-    justify-content: flex-start;
-    padding-top: 50px;
-  }
-  .machine {
-    width: 100%;
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px;
-    height: auto;
-    border-width: 2px;
-  }
-
-  .slot {
-    font-size: 500%;
-    height: 150px;
-  }
-
-  #result {
-    font-size: 32px;
-    margin-bottom: 30px;
-  }
-
-  .control {
-    margin-top: 40px;
-  }
-
-  .copyright {
-    height: 40px;
-  }
-}
