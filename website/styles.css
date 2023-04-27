@@ -16,6 +16,7 @@ body {
   font-family: 'Goudy Old Style', sans-serif; 
   background-image: url("../images/slot1_crop2-transformed.jpeg");
   background-size: cover; 
+  background-attachment: fixed;
 }
 
 .image-class {
