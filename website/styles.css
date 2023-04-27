@@ -82,8 +82,9 @@ body {
 
 .slot {
   height: 100%;
+  width: 32%;
   background-color: rgb(239, 234, 218); /*240, 230, 200*/
-  font-size: 200%;
+  font-size: 150%;
   font-weight: bold;
   border-radius: 1%;
   display: flex;
