@@ -17,6 +17,7 @@ body {
   background-image: url("../images/slot1_crop2-transformed.jpeg");
   background-size: cover; 
   background-attachment: fixed;
+  height: 100%;
 }
 
 .image-class {
