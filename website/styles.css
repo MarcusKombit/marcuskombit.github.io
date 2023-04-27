@@ -6,6 +6,12 @@
   box-sizing: border-box;
 }
 
+#wrapper {
+  margin-left:auto;
+  margin-right:auto;
+  width:960px;
+}
+
 body {
   font-family: 'Goudy Old Style', sans-serif; 
   background-image: url("../images/slot1_crop2-transformed.jpeg");
