@@ -2,7 +2,7 @@
 
 // let values = ['Skole', 'Borger', 'Dagtilbud', 'DFDG', 'DREAM', 'FSIII', 'KY', 'Nøgletal', 'Aula', 'Ældre'];
 
-// let values = ['😀', '😁', '😂', '🤣', '😄', '😅', '😆', '😉', '😋', '😍'];
+// let values = ['😀', '😁', '😂', '🤣', '😄', '😅', '😆', '😉', '😋', '😍']; 🏆
 
 
 let values = ['Elevfravær\nSkole', 'Udgifter til dagpleje\nDagtilbud', 'Helbredstilstand\nFSIII', 'Anbringelsessted\nUdsatte børn og unge', 'Sagsbehandlingstid\nKY', 'Pendlermønstre\nDREAM'];
