@@ -2,8 +2,8 @@
 
 // let values = ['Skole', 'Borger', 'Dagtilbud', 'DFDG', 'DREAM', 'FSIII', 'KY', 'Nøgletal', 'Aula', 'Ældre'];
 
-// let values = ['😀', '😁', '😂', '🤣', '😄', '😅', '😆', '😉', '😋', '😍']; 🏆
-
+// let values = ['😀', '😁', '😂', '🤣', '😄', '😅', '😆', '😉', '😋', '😍']; 🏆 😭
+// Emojies: https://www.w3schools.com/charsets/ref_emoji_smileys.asp
 
 let values = ['Elevfravær\nSkole', 'Udgifter til dagpleje\nDagtilbud', 'Helbredstilstand\nFSIII', 'Anbringelsessted\nUdsatte børn og unge', 'Sagsbehandlingstid\nKY', 'Pendlermønstre\nDREAM'];
 
@@ -80,9 +80,9 @@ function spinValues() {
     slotThree = valueThree.innerHTML;
 
     if (slotOne == slotTwo && slotTwo == slotThree) {
-      result.innerHTML = 'Du vandt! 🏆';
+      result.innerHTML = 'TILLYKKE! 🏆';
     } else {
-      result.innerHTML = 'Prøv igen!';
+      result.innerHTML = 'ØV!😭 Prøv igen!';
     }
   }
 }
