@@ -53,6 +53,7 @@ function spinValues() {
 
     if (initValue_one == attempts) {
       clearInterval(slotOne);
+      checkVictory(); // Check for victory after each slot has stopped spinning
       return null;
     }
   }, 100);
@@ -64,6 +65,7 @@ function spinValues() {
 
     if (initValue_two == attempts) {
       clearInterval(slotTwo);
+      checkVictory(); // Check for victory after each slot has stopped spinning
       return null;
     }
   }, 100);
@@ -75,25 +77,17 @@ function spinValues() {
 
     if (initValue_three == attempts) {
       clearInterval(slotThree);
-      victory(words1, words2, words3); // Pass words1, words2, and words3 as arguments to the victory function
+      checkVictory(); // Check for victory after each slot has stopped spinning
       playBtn.disabled = false;
       return null;
     }
   }, 100);
 
-  function victory(words1, words2, words3) {
-    if (words1[0] == words2[0] && words2[0] == words3[0]) {
+  function checkVictory() {
+    if (words1[0] === words2[0] && words2[0] === words3[0]) {
       result.innerHTML = 'TILLYKKE! 🏆';
     } else {
       result.innerHTML = 'ØV!😭 Prøv igen!';
     }
   }
-}
-
-function randomNumber(length) {
-  return Math.floor(Math.random() * length);
-}
-
-function randomAttempts(min, max) {
-  return Math.floor(Math.random() * max + min);
 }
