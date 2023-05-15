@@ -35,13 +35,19 @@ function spinValues() {
     initValue_three = 0;
 
   /*
+   * words1, words2, words3
+   * Declare these variables outside of setInterval scope to use in the victory function
+   */
+  let words1, words2, words3;
+
+  /*
    * slotOne, slotTwo, slotThree
    * For each slot, using 'setInterval' method
    * Generate random emojis until the number of attempts is reached
    * When the last slot has loaded, the victory function is called up
    */
   let slotOne = setInterval(() => {
-    let words1 = values[randomNumber(values.length)].split('\n');
+    words1 = values[randomNumber(values.length)].split('\n');
     valueOne.innerHTML = words1[0] + '<br>' + '<span class="smaller">' + words1[1] + '</span>';
     initValue_one++;
 
@@ -52,7 +58,7 @@ function spinValues() {
   }, 100);
 
   let slotTwo = setInterval(() => {
-    let words2 = values[randomNumber(values.length)].split('\n');
+    words2 = values[randomNumber(values.length)].split('\n');
     valueTwo.innerHTML = words2[0] + '<br>' + '<span class="smaller">' + words2[1] + '</span>';
     initValue_two++;
 
@@ -63,24 +69,20 @@ function spinValues() {
   }, 100);
 
   let slotThree = setInterval(() => {
-    let words3 = values[randomNumber(values.length)].split('\n');
+    words3 = values[randomNumber(values.length)].split('\n');
     valueThree.innerHTML = words3[0] + '<br>' + '<span class="smaller">' + words3[1] + '</span>';
     initValue_three++;
 
     if (initValue_three == attempts) {
       clearInterval(slotThree);
-      victory();
+      victory(words1, words2, words3); // Pass words1, words2, and words3 as arguments to the victory function
       playBtn.disabled = false;
       return null;
     }
   }, 100);
 
-  function victory() {
-    slotOne = words1[0].innerHTML;
-    slotTwo = words2[0].innerHTML;
-    slotThree = words3[0].innerHTML;
-
-    if (slotOne == slotTwo && slotTwo == slotThree) {
+  function victory(words1, words2, words3) {
+    if (words1[0] == words2[0] && words2[0] == words3[0]) {
       result.innerHTML = 'TILLYKKE! 🏆';
     } else {
       result.innerHTML = 'ØV!😭 Prøv igen!';
