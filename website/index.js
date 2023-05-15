@@ -1,11 +1,12 @@
 'use strict';
 
 // let values = ['Skole', 'Borger', 'Dagtilbud', 'DFDG', 'DREAM', 'FSIII', 'KY', 'Nøgletal', 'Aula', 'Ældre'];
+// let values = ['Elevfravær\nSkole', 'Udgifter til dagpleje\nDagtilbud', 'Helbredstilstand\nFSIII', 'Anbringelsessted\nUdsatte børn og unge', 'Sagsbehandlingstid\nKY', 'Pendlermønstre\nDREAM'];
 
 // let values = ['😀', '😁', '😂', '🤣', '😄', '😅', '😆', '😉', '😋', '😍']; 🏆 😭
 // Emojies: https://www.w3schools.com/charsets/ref_emoji_smileys.asp
 
-let values = ['Elevfravær\nSkole', 'Udgifter til dagpleje\nDagtilbud', 'Helbredstilstand\nFSIII', 'Anbringelsessted\nUdsatte børn og unge', 'Sagsbehandlingstid\nKY', 'Pendlermønstre\nDREAM'];
+let values = ['Elevfravær\nSkole & Daginstitutioner', 'Udgifter til dagpleje\nSkole & Daginstitutioner', 'Helbredstilstand\nSocial', 'Anbringelsessted\nSocial', 'Sagsbehandlingstid\nBeskæftigelse', 'Pendlermønstre\nBeskæftigelse', 'Økonomi\nTværgående', 'Borger\nTværgående', 'Personale & Fravær\nTværgående'];
 
 
 // selecting all elements
@@ -40,8 +41,8 @@ function spinValues() {
    * When the last slot has loaded, the victory function is called up
    */
   let slotOne = setInterval(() => {
-    let words = values[randomNumber(values.length)].split('\n');
-    valueOne.innerHTML = words[0] + '<br>' + '<span class="smaller">' + words[1] + '</span>';
+    let words1 = values[randomNumber(values.length)].split('\n');
+    valueOne.innerHTML = words1[0] + '<br>' + '<span class="smaller">' + words1[1] + '</span>';
     initValue_one++;
 
     if (initValue_one == attempts) {
@@ -51,8 +52,8 @@ function spinValues() {
   }, 100);
 
   let slotTwo = setInterval(() => {
-    let words = values[randomNumber(values.length)].split('\n');
-    valueTwo.innerHTML = words[0] + '<br>' + '<span class="smaller">' + words[1] + '</span>';
+    let words2 = values[randomNumber(values.length)].split('\n');
+    valueTwo.innerHTML = words2[0] + '<br>' + '<span class="smaller">' + words2[1] + '</span>';
     initValue_two++;
 
     if (initValue_two == attempts) {
@@ -62,8 +63,8 @@ function spinValues() {
   }, 100);
 
   let slotThree = setInterval(() => {
-    let words = values[randomNumber(values.length)].split('\n');
-    valueThree.innerHTML = words[0] + '<br>' + '<span class="smaller">' + words[1] + '</span>';
+    let words3 = values[randomNumber(values.length)].split('\n');
+    valueThree.innerHTML = words3[0] + '<br>' + '<span class="smaller">' + words3[1] + '</span>';
     initValue_three++;
 
     if (initValue_three == attempts) {
@@ -75,9 +76,9 @@ function spinValues() {
   }, 100);
 
   function victory() {
-    slotOne = valueOne.innerHTML;
-    slotTwo = valueTwo.innerHTML;
-    slotThree = valueThree.innerHTML;
+    slotOne = words1[0].innerHTML;
+    slotTwo = words2[0].innerHTML;
+    slotThree = words3[0].innerHTML;
 
     if (slotOne == slotTwo && slotTwo == slotThree) {
       result.innerHTML = 'TILLYKKE! 🏆';
