@@ -91,3 +91,11 @@ function spinValues() {
     }
   }
 }
+
+function randomNumber(length) {
+  return Math.floor(Math.random() * length);
+}
+
+function randomAttempts(min, max) {
+  return Math.floor(Math.random() * max + min);
+}
