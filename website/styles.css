@@ -19,7 +19,7 @@ body {
   width: 180px;
   height: 80px;
   object-fit: contain; 
-  background-color: rgba(255, 255, 255, 1);
+  background-color: rgba(255, 255, 255, 0.2);
   border-radius: 20px;
 }
 
@@ -171,6 +171,7 @@ body {
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 20px;
   padding: 0px 20px;
+  outline: 2px solid #ffffff;
 }
 
 /* Copyright */
