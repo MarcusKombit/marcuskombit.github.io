@@ -84,7 +84,7 @@ function spinValues() {
   }, 100);
 
   function checkVictory() {
-    if (words1[0] === words2[0] && words2[0] === words3[0]) {
+    if (words1[1] === words2[1] && words2[1] === words3[1]) {
       result.innerHTML = 'TILLYKKE! 🏆';
     } else {
       result.innerHTML = 'ØV!😭 Prøv igen!';
