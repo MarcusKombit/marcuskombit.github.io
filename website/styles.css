@@ -92,7 +92,7 @@ body {
 }
 
 .smaller {
-  font-size: 50%;
+  font-size: 60%;
   text-align: center;
   display: flex;
   align-items: center;
@@ -100,6 +100,14 @@ body {
   color: rgb(200, 16, 46);
 }
 
+.data {
+  font-size: 60%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(0, 0, 0);
+}
 
 /* controls styles */
 .control {
