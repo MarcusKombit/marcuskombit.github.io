@@ -13,7 +13,7 @@ let values = ['Elevfravær\nSkole & Daginstitutioner\n(Skole)',
 'Sagsbehandlingstid\nArbejdsmarked og Beskæftigelse\n(KY)', 
 'Pendlermønstre\nArbejdsmarked & Beskæftigelse\n(DREAM)', 
 'Økonomi\nTværgående\n(Tværgående)', 
-'Borger\nTværgående\n(Tværgående)', 
+'  Borger\nTværgående\n(Tværgående)', 
 'Personale & Fravær\nTværgående\n(Tværgående)'];
 
 
