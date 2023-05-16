@@ -6,7 +6,7 @@
 // let values = ['😀', '😁', '😂', '🤣', '😄', '😅', '😆', '😉', '😋', '😍']; 🏆 😭
 // Emojies: https://www.w3schools.com/charsets/ref_emoji_smileys.asp
 
-let values = ['Elevfravær\nSkole & Daginstitutioner', 'Udgifter til dagpleje\nSkole & Daginstitutioner']; //'Helbredstilstand\nSocial', 'Anbringelsessted\nSocial', 'Sagsbehandlingstid\nBeskæftigelse', 'Pendlermønstre\nBeskæftigelse', 'Økonomi\nTværgående', 'Borger\nTværgående', 'Personale & Fravær\nTværgående'];
+let values = ['Elevfravær\nSkole & Daginstitutioner', 'Udgifter til dagpleje\nSkole & Daginstitutioner', 'Helbredstilstand\nSocial', 'Anbringelsessted\nSocial', 'Sagsbehandlingstid\nBeskæftigelse', 'Pendlermønstre\nBeskæftigelse', 'Økonomi\nTværgående', 'Borger\nTværgående', 'Personale & Fravær\nTværgående'];
 
 
 // selecting all elements
