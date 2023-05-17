@@ -12,9 +12,9 @@ let values = ['      Elevfravær\nSkole & Daginstitutioner\n(Skole)',
 'Anbringelsessted\nSocial & Sundhed\n(Udsatte børn og unge)', 
 '   Sagsbehandlingstid\nArbejdsmarked & Beskæftigelse\n(KY)', 
 '      Pendlermønstre\nArbejdsmarked & Beskæftigelse\n(DREAM)', 
-' Økonomi\nTværgående', 
-'   Borger\nTværgående', 
-'Personale & Fravær\nTværgående'];
+' Økonomi\nTværgående\n&nbsp;', 
+'   Borger\nTværgående\n&nbsp;', 
+'Personale & Fravær\nTværgående\n&nbsp;'];
 
 
 // selecting all elements
