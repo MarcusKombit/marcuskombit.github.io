@@ -10,11 +10,11 @@ let values = ['      Elevfravær\nSkole & Daginstitutioner\n(Skole)',
 'Udgifter til dagpleje\nSkole & Daginstitutioner\n(Dagtilbud)', 
 'Helbredstilstand\nSocial & Sundhed\n(FSIII)', 
 'Anbringelsessted\nSocial & Sundhed\n(Udsatte børn og unge)', 
-'   Sagsbehandlingstid\nArbejdsmarked og Beskæftigelse\n(KY)', 
+'   Sagsbehandlingstid\nArbejdsmarked & Beskæftigelse\n(KY)', 
 '      Pendlermønstre\nArbejdsmarked & Beskæftigelse\n(DREAM)', 
-' Økonomi\nTværgående\n(Tværgående)', 
-'   Borger\nTværgående\n(Tværgående)', 
-'Personale & Fravær\nTværgående\n(Tværgående)'];
+' Økonomi\nTværgående\n', 
+'   Borger\nTværgående\n', 
+'Personale & Fravær\nTværgående\n'];
 
 
 // selecting all elements
