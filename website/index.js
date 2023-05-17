@@ -80,7 +80,7 @@ function spinValues() {
 
   let slotThree = setInterval(() => {
     words3 = values[randomNumber(values.length)].split('\n');
-    valueThree.innerHTML = words3[0] + '<br>' + '<span class="smaller">' + words3[1] + '</span>' + '<br>' + '<span class="data">' + words3[2] + '</span>';
+    valueThree.innerHTML = words3[0] + '<br>' + '<br>' + '<span class="smaller">' + words3[1] + '</span>' + '<br>' + '<span class="data">' + words3[2] + '</span>';
     initValue_three++;
 
     if (initValue_three == attempts) {
