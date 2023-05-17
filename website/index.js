@@ -6,14 +6,14 @@
 // let values = ['😀', '😁', '😂', '🤣', '😄', '😅', '😆', '😉', '😋', '😍']; 🏆 😭
 // Emojies: https://www.w3schools.com/charsets/ref_emoji_smileys.asp
 
-let values = ['    Elevfravær\nSkole & Daginstitutioner\n(Skole)', 
+let values = ['     Elevfravær\nSkole & Daginstitutioner\n(Skole)', 
 'Udgifter til dagpleje\nSkole & Daginstitutioner\n(Dagtilbud)', 
 'Helbredstilstand\nSocial & Sundhed\n(FSIII)', 
 'Anbringelsessted\nSocial & Sundhed\n(Udsatte børn og unge)', 
 'Sagsbehandlingstid\nArbejdsmarked og Beskæftigelse\n(KY)', 
-'   Pendlermønstre\nArbejdsmarked & Beskæftigelse\n(DREAM)', 
+'    Pendlermønstre\nArbejdsmarked & Beskæftigelse\n(DREAM)', 
 'Økonomi\nTværgående\n(Tværgående)', 
-'  Borger\nTværgående\n(Tværgående)', 
+'   Borger\nTværgående\n(Tværgående)', 
 'Personale & Fravær\nTværgående\n(Tværgående)'];
 
 
@@ -56,7 +56,7 @@ function spinValues() {
    */
   let slotOne = setInterval(() => {
     words1 = values[randomNumber(values.length)].split('\n');
-    valueOne.innerHTML = words1[0] + '<br>' + '<span class="smaller">' + words1[1] + '</span>' + '<br>' + '<span class="data">' + words1[2] + '</span>';
+    valueOne.innerHTML = words1[0] + '<br>' + '<br>' + '<span class="smaller">' + words1[1] + '</span>' + '<br>' + '<span class="data">' + words1[2] + '</span>';
     initValue_one++;
 
     if (initValue_one == attempts) {
@@ -68,7 +68,7 @@ function spinValues() {
 
   let slotTwo = setInterval(() => {
     words2 = values[randomNumber(values.length)].split('\n');
-    valueTwo.innerHTML = words2[0] + '<br>' + '<span class="smaller">' + words2[1] + '</span>' + '<br>' + '<span class="data">' + words2[2] + '</span>';
+    valueTwo.innerHTML = words2[0] + '<br>' + '<br>' + '<span class="smaller">' + words2[1] + '</span>' + '<br>' + '<span class="data">' + words2[2] + '</span>';
     initValue_two++;
 
     if (initValue_two == attempts) {
