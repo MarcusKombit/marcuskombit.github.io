@@ -12,9 +12,9 @@ let values = ['      Elevfravær\nSkole & Daginstitutioner\n(Skole)',
 'Anbringelsessted\nSocial & Sundhed\n(Udsatte børn og unge)', 
 '   Sagsbehandlingstid\nArbejdsmarked & Beskæftigelse\n(KY)', 
 '      Pendlermønstre\nArbejdsmarked & Beskæftigelse\n(DREAM)', 
-' Økonomi\nTværgående\n \n ', 
-'   Borger\nTværgående\n  ', 
-'Personale & Fravær\nTværgående\n          '];
+' Økonomi\nTværgående\n', 
+'   Borger\nTværgående\nI', 
+'Personale & Fravær\nTværgående\n'];
 
 
 // selecting all elements
@@ -56,7 +56,7 @@ function spinValues() {
    */
   let slotOne = setInterval(() => {
     words1 = values[randomNumber(values.length)].split('\n');
-    valueOne.innerHTML = words1[0] + '<br>' + '<br>' + '<span class="smaller">' + words1[1] + '</span>' + '<br>' + '<span class="data">' + words1[2] + '</span>';
+    valueOne.innerHTML = words1[0] + '<br>' + '<br>' + '<span class="smaller">' + words1[1] + '</span>' + '<br>' + '<span class="data">' + (words1[2] || '') + '</span>';
     initValue_one++;
 
     if (initValue_one == attempts) {
@@ -68,7 +68,7 @@ function spinValues() {
 
   let slotTwo = setInterval(() => {
     words2 = values[randomNumber(values.length)].split('\n');
-    valueTwo.innerHTML = words2[0] + '<br>' + '<br>' + '<span class="smaller">' + words2[1] + '</span>' + '<br>' + '<span class="data">' + words2[2] + '</span>';
+    valueTwo.innerHTML = words2[0] + '<br>' + '<br>' + '<span class="smaller">' + words2[1] + '</span>' + '<br>' + '<span class="data">' + (words2[2] || '\n') + '</span>';
     initValue_two++;
 
     if (initValue_two == attempts) {
@@ -80,7 +80,7 @@ function spinValues() {
 
   let slotThree = setInterval(() => {
     words3 = values[randomNumber(values.length)].split('\n');
-    valueThree.innerHTML = words3[0] + '<br>' + '<br>' + '<span class="smaller">' + words3[1] + '</span>' + '<br>' + '<span class="data">' + words3[2] + '</span>';
+    valueThree.innerHTML = words3[0] + '<br>' + '<br>' + '<span class="smaller">' + words3[1] + '</span>' + '<br>' + '<span class="data">' + (words3[2] || ' ') + '</span>';
     initValue_three++;
 
     if (initValue_three == attempts) {
