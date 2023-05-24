@@ -14,8 +14,8 @@ body {
 
 .image-class {
   position: fixed;
-  bottom: 1%;
-  right: 1%;
+  bottom: 10%;
+  right: 80%;
   width: 180px;
   height: 80px;
   object-fit: contain; 

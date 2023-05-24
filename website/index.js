@@ -12,11 +12,11 @@ let values = ['       Elevfravær\nSkole & Daginstitutioner\n(Skole)',
 'Anbringelsessted\nSocial & Sundhed\n(Udsatte børn og unge)', 
 '   Sagsbehandlingstid\nArbejdsmarked & Beskæftigelse\n(KY)', 
 '       Pendlermønstre\nArbejdsmarked & Beskæftigelse\n(DREAM)', 
-'Økonomi\nTværgående\n&nbsp;', 
-'  Borger\nTværgående\n&nbsp;', 
-'Personale & Fravær\nTværgående\n&nbsp;'];
+'Forbrug\nTværgående\n(Økonomi)', 
+'  Tilflyttede\nTværgående\n(Borger)', 
+'Aflønningsform\nTværgående\nPersonale & Fravær'];
 
-
+//&nbsp;
 // selecting all elements
 let valueOne = document.getElementById('value-one');
 let valueTwo = document.getElementById('value-two');
