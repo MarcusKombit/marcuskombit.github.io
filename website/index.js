@@ -14,7 +14,7 @@ let values = ['       Elevfravær\nSkole & Daginstitutioner\n(Skole)',
 '       Pendlermønstre\nArbejdsmarked & Beskæftigelse\n(DREAM)', 
 'Forbrug\nTværgående\n(Økonomi)', 
 '  Tilflyttede\nTværgående\n(Borger)', 
-'Aflønningsform\nTværgående\nPersonale & Fravær'];
+'Aflønningsform\nTværgående\n(Personale & Fravær)'];
 
 //&nbsp;
 // selecting all elements
